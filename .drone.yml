@@ -1,0 +1,2070 @@
+---
+kind: pipeline
+name: 1.5.6
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.5.6
+      dockerfile: dockerfiles/1.5.6/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.5.7
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.5.7
+      dockerfile: dockerfiles/1.5.7/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.5.8
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.5.8
+      dockerfile: dockerfiles/1.5.8/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.5.9
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.5.9
+      dockerfile: dockerfiles/1.5.9/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.5.10
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.5.10
+      dockerfile: dockerfiles/1.5.10/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.5.11
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.5.11
+      dockerfile: dockerfiles/1.5.11/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.5.12
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.5.12
+      dockerfile: dockerfiles/1.5.12/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.5.13
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.5.13
+      dockerfile: dockerfiles/1.5.13/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.6.0
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.6.0
+      dockerfile: dockerfiles/1.6.0/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.6.1
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.6.1
+      dockerfile: dockerfiles/1.6.1/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.6.2
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.6.2
+      dockerfile: dockerfiles/1.6.2/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.6.3
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.6.3
+      dockerfile: dockerfiles/1.6.3/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.6.4
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.6.4
+      dockerfile: dockerfiles/1.6.4/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.6.5
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.6.5
+      dockerfile: dockerfiles/1.6.5/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.7.0
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.7.0
+      dockerfile: dockerfiles/1.7.0/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.7.1
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.7.1
+      dockerfile: dockerfiles/1.7.1/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.7.2
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.7.2
+      dockerfile: dockerfiles/1.7.2/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.7.3
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.7.3
+      dockerfile: dockerfiles/1.7.3/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.7.4
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.7.4
+      dockerfile: dockerfiles/1.7.4/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.7.5
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.7.5
+      dockerfile: dockerfiles/1.7.5/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.7.6
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.7.6
+      dockerfile: dockerfiles/1.7.6/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.7.7
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.7.7
+      dockerfile: dockerfiles/1.7.7/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.7.8
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.7.8
+      dockerfile: dockerfiles/1.7.8/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.7.9
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.7.9
+      dockerfile: dockerfiles/1.7.9/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.7.10
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.7.10
+      dockerfile: dockerfiles/1.7.10/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.7.11
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.7.11
+      dockerfile: dockerfiles/1.7.11/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.7.12
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.7.12
+      dockerfile: dockerfiles/1.7.12/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.7.13
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.7.13
+      dockerfile: dockerfiles/1.7.13/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.7.14
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.7.14
+      dockerfile: dockerfiles/1.7.14/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.7.15
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.7.15
+      dockerfile: dockerfiles/1.7.15/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.7.16
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.7.16
+      dockerfile: dockerfiles/1.7.16/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.7.17
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.7.17
+      dockerfile: dockerfiles/1.7.17/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.7.18
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.7.18
+      dockerfile: dockerfiles/1.7.18/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.7.19
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.7.19
+      dockerfile: dockerfiles/1.7.19/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.7.20
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.7.20
+      dockerfile: dockerfiles/1.7.20/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.7.21
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.7.21
+      dockerfile: dockerfiles/1.7.21/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.7.22
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.7.22
+      dockerfile: dockerfiles/1.7.22/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.7.23
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.7.23
+      dockerfile: dockerfiles/1.7.23/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.7.24
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.7.24
+      dockerfile: dockerfiles/1.7.24/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.8.0
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.8.0
+      dockerfile: dockerfiles/1.8.0/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.8.1
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.8.1
+      dockerfile: dockerfiles/1.8.1/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.8.2
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.8.2
+      dockerfile: dockerfiles/1.8.2/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.8.3
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.8.3
+      dockerfile: dockerfiles/1.8.3/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.8.4
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.8.4
+      dockerfile: dockerfiles/1.8.4/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.8.5
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.8.5
+      dockerfile: dockerfiles/1.8.5/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.8.6
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.8.6
+      dockerfile: dockerfiles/1.8.6/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.8.7
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.8.7
+      dockerfile: dockerfiles/1.8.7/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.8.8
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.8.8
+      dockerfile: dockerfiles/1.8.8/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.8.9
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.8.9
+      dockerfile: dockerfiles/1.8.9/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.8.10
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.8.10
+      dockerfile: dockerfiles/1.8.10/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.8.11
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.8.11
+      dockerfile: dockerfiles/1.8.11/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.8.12
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.8.12
+      dockerfile: dockerfiles/1.8.12/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.8.13
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.8.13
+      dockerfile: dockerfiles/1.8.13/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.8.14
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.8.14
+      dockerfile: dockerfiles/1.8.14/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.8.15
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.8.15
+      dockerfile: dockerfiles/1.8.15/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.9.0
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.9.0
+      dockerfile: dockerfiles/1.9.0/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.9.1
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.9.1
+      dockerfile: dockerfiles/1.9.1/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.9.2
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.9.2
+      dockerfile: dockerfiles/1.9.2/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.9.3
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.9.3
+      dockerfile: dockerfiles/1.9.3/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.9.4
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.9.4
+      dockerfile: dockerfiles/1.9.4/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.9.5
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.9.5
+      dockerfile: dockerfiles/1.9.5/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.9.6
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.9.6
+      dockerfile: dockerfiles/1.9.6/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.9.7
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.9.7
+      dockerfile: dockerfiles/1.9.7/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.9.8
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.9.8
+      dockerfile: dockerfiles/1.9.8/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.9.9
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.9.9
+      dockerfile: dockerfiles/1.9.9/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.9.10
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.9.10
+      dockerfile: dockerfiles/1.9.10/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.9.11
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.9.11
+      dockerfile: dockerfiles/1.9.11/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.9.12
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.9.12
+      dockerfile: dockerfiles/1.9.12/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.9.13
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.9.13
+      dockerfile: dockerfiles/1.9.13/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.9.14
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.9.14
+      dockerfile: dockerfiles/1.9.14/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.9.15
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.9.15
+      dockerfile: dockerfiles/1.9.15/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.9.16
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.9.16
+      dockerfile: dockerfiles/1.9.16/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.9.17
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.9.17
+      dockerfile: dockerfiles/1.9.17/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.9.18
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.9.18
+      dockerfile: dockerfiles/1.9.18/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.10.0
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.10.0
+      dockerfile: dockerfiles/1.10.0/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.10.1
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.10.1
+      dockerfile: dockerfiles/1.10.1/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.10.2
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.10.2
+      dockerfile: dockerfiles/1.10.2/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.10.3
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.10.3
+      dockerfile: dockerfiles/1.10.3/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.10.4
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.10.4
+      dockerfile: dockerfiles/1.10.4/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.10.5
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.10.5
+      dockerfile: dockerfiles/1.10.5/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.10.6
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.10.6
+      dockerfile: dockerfiles/1.10.6/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.10.7
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.10.7
+      dockerfile: dockerfiles/1.10.7/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.10.8
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.10.8
+      dockerfile: dockerfiles/1.10.8/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.10.9
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.10.9
+      dockerfile: dockerfiles/1.10.9/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.10.11
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.10.11
+      dockerfile: dockerfiles/1.10.11/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.10.12
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.10.12
+      dockerfile: dockerfiles/1.10.12/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.10.13
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.10.13
+      dockerfile: dockerfiles/1.10.13/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.10.14
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.10.14
+      dockerfile: dockerfiles/1.10.14/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.10.15
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.10.15
+      dockerfile: dockerfiles/1.10.15/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.10.16
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.10.16
+      dockerfile: dockerfiles/1.10.16/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.10.17
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.10.17
+      dockerfile: dockerfiles/1.10.17/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.11.0
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.11.0
+      dockerfile: dockerfiles/1.11.0/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.11.1
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.11.1
+      dockerfile: dockerfiles/1.11.1/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.11.2
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.11.2
+      dockerfile: dockerfiles/1.11.2/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.11.3
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.11.3
+      dockerfile: dockerfiles/1.11.3/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.11.4
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.11.4
+      dockerfile: dockerfiles/1.11.4/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.11.5
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.11.5
+      dockerfile: dockerfiles/1.11.5/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.11.6
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.11.6
+      dockerfile: dockerfiles/1.11.6/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.11.7
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.11.7
+      dockerfile: dockerfiles/1.11.7/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.11.8
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.11.8
+      dockerfile: dockerfiles/1.11.8/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.11.9
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.11.9
+      dockerfile: dockerfiles/1.11.9/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.11.10
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.11.10
+      dockerfile: dockerfiles/1.11.10/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.11.11
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.11.11
+      dockerfile: dockerfiles/1.11.11/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.11.12
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.11.12
+      dockerfile: dockerfiles/1.11.12/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.11.13
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.11.13
+      dockerfile: dockerfiles/1.11.13/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.11.14
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.11.14
+      dockerfile: dockerfiles/1.11.14/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.11.15
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.11.15
+      dockerfile: dockerfiles/1.11.15/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.11.16
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.11.16
+      dockerfile: dockerfiles/1.11.16/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.11.17
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.11.17
+      dockerfile: dockerfiles/1.11.17/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.11.18
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.11.18
+      dockerfile: dockerfiles/1.11.18/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.11.19
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.11.19
+      dockerfile: dockerfiles/1.11.19/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.11.20
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.11.20
+      dockerfile: dockerfiles/1.11.20/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.11.21
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.11.21
+      dockerfile: dockerfiles/1.11.21/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.11.22
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.11.22
+      dockerfile: dockerfiles/1.11.22/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.11.23
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.11.23
+      dockerfile: dockerfiles/1.11.23/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.11.24
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.11.24
+      dockerfile: dockerfiles/1.11.24/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.11.25
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.11.25
+      dockerfile: dockerfiles/1.11.25/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.11.26
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.11.26
+      dockerfile: dockerfiles/1.11.26/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.11.27
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.11.27
+      dockerfile: dockerfiles/1.11.27/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.11.28
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.11.28
+      dockerfile: dockerfiles/1.11.28/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.11.29
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.11.29
+      dockerfile: dockerfiles/1.11.29/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.11.30
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.11.30
+      dockerfile: dockerfiles/1.11.30/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.11.31
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.11.31
+      dockerfile: dockerfiles/1.11.31/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.11.32
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.11.32
+      dockerfile: dockerfiles/1.11.32/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.11.33
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.11.33
+      dockerfile: dockerfiles/1.11.33/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 1.11.34
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 1.11.34
+      dockerfile: dockerfiles/1.11.34/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 2.0.0
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 2.0.0
+      dockerfile: dockerfiles/2.0.0/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 2.0.1
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 2.0.1
+      dockerfile: dockerfiles/2.0.1/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 2.1.0
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 2.1.0
+      dockerfile: dockerfiles/2.1.0/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 2.2.0
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 2.2.0
+      dockerfile: dockerfiles/2.2.0/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 2.3.0
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 2.3.0
+      dockerfile: dockerfiles/2.3.0/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 2.4.0
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 2.4.0
+      dockerfile: dockerfiles/2.4.0/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 2.5.0
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 2.5.0
+      dockerfile: dockerfiles/2.5.0/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 2.6.0
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 2.6.0
+      dockerfile: dockerfiles/2.6.0/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 2.7.0
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 2.7.0
+      dockerfile: dockerfiles/2.7.0/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 2.8.0
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 2.8.0
+      dockerfile: dockerfiles/2.8.0/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 2.9.0
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 2.9.0
+      dockerfile: dockerfiles/2.9.0/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
+---
+kind: pipeline
+name: 2.10.0
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/botan
+      tags: 2.10.0
+      dockerfile: dockerfiles/2.10.0/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+
