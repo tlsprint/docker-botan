@@ -13,7 +13,7 @@ WORKDIR /{{ implementation }}
 RUN git clone --branch {{ tag }} --depth 1 {{ url }} .
 
 # Build
-{% if version < "1.8.3" -%}
+{% if version < "1.8.3" and version > "1.5" -%}
 RUN ./configure.pl
 {% else -%}
 RUN ./configure.py
