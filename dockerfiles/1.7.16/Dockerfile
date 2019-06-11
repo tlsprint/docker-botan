@@ -8,5 +8,5 @@ WORKDIR /botan
 RUN git clone --branch 1.7.16 --depth 1 https://github.com/randombit/botan.git .
 
 # Build
-RUN ./configure.py
+RUN ./configure.pl
 RUN make
