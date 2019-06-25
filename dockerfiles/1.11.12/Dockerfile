@@ -7,6 +7,10 @@ FROM buildpack-deps AS builder
 WORKDIR /botan
 RUN git clone --branch 1.11.12 --depth 1 https://github.com/randombit/botan.git .
 
+# Botan version 1.11.6 to 1.11.13 requires boost-filesystem in order to
+# compile.
+RUN apt-get update && apt-get install -y libboost-filesystem-dev
+
 # Build
 RUN ./configure.py
 RUN make

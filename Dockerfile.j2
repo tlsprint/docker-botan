@@ -12,6 +12,12 @@ FROM buildpack-deps AS builder
 WORKDIR /{{ implementation }}
 RUN git clone --branch {{ tag }} --depth 1 {{ url }} .
 
+{%- if version | in_version_range("1.11.6", "1.11.13") %}
+
+# Botan version 1.11.6 to 1.11.13 requires boost-filesystem in order to
+# compile.
+RUN apt-get update && apt-get install -y libboost-filesystem-dev
+{%- endif %}
 {%- if version | in_version_range("1.11.25", "1.11.29") %}
 
 # Botan version 1.11.25 to 1.11.29 are missing a <cmath> include, which causes
