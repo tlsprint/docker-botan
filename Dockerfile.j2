@@ -34,8 +34,12 @@ RUN curl https://github.com/randombit/botan/commit/585a9056166c32d1d6537c163b896
 {%- endif %}
 
 # Build
-{% if version | in_version_range("1.5", "1.8.2") -%}
+{% if version | in_version_range("1.5.6", "1.7.14") -%}
 RUN ./configure.pl
+{% elif version | in_version_range("1.7.15", "1.8.2") -%}
+# Some versions incorrectly guess the CPU as i686, while the images are build
+# on x86_64. This is solved by passing a flag to the configure script.
+RUN ./configure.pl --cpu=x86_64
 {% else -%}
 RUN ./configure.py
 {% endif -%}

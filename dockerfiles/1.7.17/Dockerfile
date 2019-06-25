@@ -8,5 +8,7 @@ WORKDIR /botan
 RUN git clone --branch 1.7.17 --depth 1 https://github.com/randombit/botan.git .
 
 # Build
-RUN ./configure.pl
+# Some versions incorrectly guess the CPU as i686, while the images are build
+# on x86_64. This is solved by passing a flag to the configure script.
+RUN ./configure.pl --cpu=x86_64
 RUN make
