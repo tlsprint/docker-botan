@@ -7,6 +7,12 @@ FROM buildpack-deps AS builder
 WORKDIR /botan
 RUN git clone --branch 1.11.27 --depth 1 https://github.com/randombit/botan.git .
 
+# Botan version 1.11.25 to 1.11.29 are missing a <cmath> include, which causes
+# the compilation to fail. This is fixed in a later version. By applying the
+# fix to these earlier releases, the issue is resolved and Botan can be
+# compiled.
+RUN curl https://github.com/randombit/botan/commit/585a9056166c32d1d6537c163b8960b2106e3e21.patch | git apply -
+
 # Build
 RUN ./configure.py
 RUN make
