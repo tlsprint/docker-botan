@@ -7,6 +7,10 @@ FROM buildpack-deps AS builder
 WORKDIR /botan
 RUN git clone --branch 1.9.2 --depth 1 https://github.com/randombit/botan.git .
 
+# Botan version 1.9.0 to 1.9.7 do not compile, and some patched from later
+# releases must be applied first.
+RUN curl https://github.com/randombit/botan/commit/211d835a356f55e037ff8035017d79c458f13615.patch | git apply --include=src/alloc/secmem.h -
+
 # Build
 RUN ./configure.py
 RUN make

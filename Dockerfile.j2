@@ -12,6 +12,12 @@ FROM buildpack-deps AS builder
 WORKDIR /{{ implementation }}
 RUN git clone --branch {{ tag }} --depth 1 {{ url }} .
 
+{%- if version | in_version_range("1.9.0", "1.9.7") %}
+
+# Botan version 1.9.0 to 1.9.7 do not compile, and some patched from later
+# releases must be applied first.
+RUN curl https://github.com/randombit/botan/commit/211d835a356f55e037ff8035017d79c458f13615.patch | git apply --include=src/alloc/secmem.h -
+{%- endif %}
 {%- if version | in_version_range("1.11.6", "1.11.13") %}
 
 # Botan version 1.11.6 to 1.11.13 requires boost-filesystem in order to
