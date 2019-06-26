@@ -13,6 +13,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.5.7
@@ -27,6 +39,18 @@ steps:
       dockerfile: dockerfiles/1.5.7/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -43,6 +67,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.5.9
@@ -57,6 +93,18 @@ steps:
       dockerfile: dockerfiles/1.5.9/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -73,6 +121,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.5.11
@@ -87,6 +147,18 @@ steps:
       dockerfile: dockerfiles/1.5.11/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -103,6 +175,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.5.13
@@ -117,6 +201,18 @@ steps:
       dockerfile: dockerfiles/1.5.13/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -133,6 +229,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.6.1
@@ -147,6 +255,18 @@ steps:
       dockerfile: dockerfiles/1.6.1/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -163,6 +283,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.6.3
@@ -177,6 +309,18 @@ steps:
       dockerfile: dockerfiles/1.6.3/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -193,6 +337,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.6.5
@@ -207,6 +363,18 @@ steps:
       dockerfile: dockerfiles/1.6.5/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -223,6 +391,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.7.1
@@ -237,6 +417,18 @@ steps:
       dockerfile: dockerfiles/1.7.1/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -253,6 +445,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.7.3
@@ -267,6 +471,18 @@ steps:
       dockerfile: dockerfiles/1.7.3/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -283,6 +499,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.7.5
@@ -297,6 +525,18 @@ steps:
       dockerfile: dockerfiles/1.7.5/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -313,6 +553,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.7.7
@@ -327,6 +579,18 @@ steps:
       dockerfile: dockerfiles/1.7.7/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -343,6 +607,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.7.9
@@ -357,6 +633,18 @@ steps:
       dockerfile: dockerfiles/1.7.9/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -373,6 +661,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.7.11
@@ -387,6 +687,18 @@ steps:
       dockerfile: dockerfiles/1.7.11/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -403,6 +715,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.7.13
@@ -417,6 +741,18 @@ steps:
       dockerfile: dockerfiles/1.7.13/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -433,6 +769,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.7.15
@@ -447,6 +795,18 @@ steps:
       dockerfile: dockerfiles/1.7.15/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -463,6 +823,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.7.17
@@ -477,6 +849,18 @@ steps:
       dockerfile: dockerfiles/1.7.17/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -493,6 +877,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.7.19
@@ -507,6 +903,18 @@ steps:
       dockerfile: dockerfiles/1.7.19/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -523,6 +931,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.7.21
@@ -537,6 +957,18 @@ steps:
       dockerfile: dockerfiles/1.7.21/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -553,6 +985,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.7.23
@@ -567,6 +1011,18 @@ steps:
       dockerfile: dockerfiles/1.7.23/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -583,6 +1039,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.8.0
@@ -597,6 +1065,18 @@ steps:
       dockerfile: dockerfiles/1.8.0/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -613,6 +1093,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.8.2
@@ -627,6 +1119,18 @@ steps:
       dockerfile: dockerfiles/1.8.2/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -643,6 +1147,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.8.4
@@ -657,6 +1173,18 @@ steps:
       dockerfile: dockerfiles/1.8.4/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -673,6 +1201,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.8.6
@@ -687,6 +1227,18 @@ steps:
       dockerfile: dockerfiles/1.8.6/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -703,6 +1255,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.8.8
@@ -717,6 +1281,18 @@ steps:
       dockerfile: dockerfiles/1.8.8/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -733,6 +1309,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.8.10
@@ -747,6 +1335,18 @@ steps:
       dockerfile: dockerfiles/1.8.10/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -763,6 +1363,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.8.12
@@ -777,6 +1389,18 @@ steps:
       dockerfile: dockerfiles/1.8.12/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -793,6 +1417,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.8.14
@@ -807,6 +1443,18 @@ steps:
       dockerfile: dockerfiles/1.8.14/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -823,6 +1471,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.9.0
@@ -837,6 +1497,18 @@ steps:
       dockerfile: dockerfiles/1.9.0/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -853,6 +1525,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.9.2
@@ -867,6 +1551,18 @@ steps:
       dockerfile: dockerfiles/1.9.2/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -883,6 +1579,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.9.4
@@ -897,6 +1605,18 @@ steps:
       dockerfile: dockerfiles/1.9.4/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -913,6 +1633,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.9.6
@@ -927,6 +1659,18 @@ steps:
       dockerfile: dockerfiles/1.9.6/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -943,6 +1687,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.9.8
@@ -957,6 +1713,18 @@ steps:
       dockerfile: dockerfiles/1.9.8/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -973,6 +1741,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.9.10
@@ -987,6 +1767,18 @@ steps:
       dockerfile: dockerfiles/1.9.10/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1003,6 +1795,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.9.12
@@ -1017,6 +1821,18 @@ steps:
       dockerfile: dockerfiles/1.9.12/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1033,6 +1849,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.9.14
@@ -1047,6 +1875,18 @@ steps:
       dockerfile: dockerfiles/1.9.14/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1063,6 +1903,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.9.16
@@ -1077,6 +1929,18 @@ steps:
       dockerfile: dockerfiles/1.9.16/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1093,6 +1957,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.9.18
@@ -1107,6 +1983,18 @@ steps:
       dockerfile: dockerfiles/1.9.18/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1123,6 +2011,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.10.1
@@ -1137,6 +2037,18 @@ steps:
       dockerfile: dockerfiles/1.10.1/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1153,6 +2065,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.10.3
@@ -1167,6 +2091,18 @@ steps:
       dockerfile: dockerfiles/1.10.3/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1183,6 +2119,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.10.5
@@ -1197,6 +2145,18 @@ steps:
       dockerfile: dockerfiles/1.10.5/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1213,6 +2173,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.10.7
@@ -1227,6 +2199,18 @@ steps:
       dockerfile: dockerfiles/1.10.7/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1243,6 +2227,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.10.9
@@ -1257,6 +2253,18 @@ steps:
       dockerfile: dockerfiles/1.10.9/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1273,6 +2281,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.10.12
@@ -1287,6 +2307,18 @@ steps:
       dockerfile: dockerfiles/1.10.12/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1303,6 +2335,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.10.14
@@ -1317,6 +2361,18 @@ steps:
       dockerfile: dockerfiles/1.10.14/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1333,6 +2389,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.10.16
@@ -1347,6 +2415,18 @@ steps:
       dockerfile: dockerfiles/1.10.16/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1363,6 +2443,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.11.0
@@ -1377,6 +2469,18 @@ steps:
       dockerfile: dockerfiles/1.11.0/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1393,6 +2497,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.11.2
@@ -1407,6 +2523,18 @@ steps:
       dockerfile: dockerfiles/1.11.2/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1423,6 +2551,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.11.4
@@ -1437,6 +2577,18 @@ steps:
       dockerfile: dockerfiles/1.11.4/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1453,6 +2605,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.11.6
@@ -1467,6 +2631,18 @@ steps:
       dockerfile: dockerfiles/1.11.6/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1483,6 +2659,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.11.8
@@ -1497,6 +2685,18 @@ steps:
       dockerfile: dockerfiles/1.11.8/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1513,6 +2713,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.11.10
@@ -1527,6 +2739,18 @@ steps:
       dockerfile: dockerfiles/1.11.10/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1543,6 +2767,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.11.12
@@ -1557,6 +2793,18 @@ steps:
       dockerfile: dockerfiles/1.11.12/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1573,6 +2821,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.11.14
@@ -1587,6 +2847,18 @@ steps:
       dockerfile: dockerfiles/1.11.14/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1603,6 +2875,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.11.16
@@ -1617,6 +2901,18 @@ steps:
       dockerfile: dockerfiles/1.11.16/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1633,6 +2929,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.11.18
@@ -1647,6 +2955,18 @@ steps:
       dockerfile: dockerfiles/1.11.18/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1663,6 +2983,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.11.20
@@ -1677,6 +3009,18 @@ steps:
       dockerfile: dockerfiles/1.11.20/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1693,6 +3037,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.11.22
@@ -1707,6 +3063,18 @@ steps:
       dockerfile: dockerfiles/1.11.22/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1723,6 +3091,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.11.24
@@ -1737,6 +3117,18 @@ steps:
       dockerfile: dockerfiles/1.11.24/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1753,6 +3145,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.11.26
@@ -1767,6 +3171,18 @@ steps:
       dockerfile: dockerfiles/1.11.26/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1783,6 +3199,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.11.28
@@ -1797,6 +3225,18 @@ steps:
       dockerfile: dockerfiles/1.11.28/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1813,6 +3253,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.11.30
@@ -1827,6 +3279,18 @@ steps:
       dockerfile: dockerfiles/1.11.30/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1843,6 +3307,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.11.32
@@ -1857,6 +3333,18 @@ steps:
       dockerfile: dockerfiles/1.11.32/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1873,6 +3361,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 1.11.34
@@ -1887,6 +3387,18 @@ steps:
       dockerfile: dockerfiles/1.11.34/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1903,6 +3415,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 2.0.1
@@ -1917,6 +3441,18 @@ steps:
       dockerfile: dockerfiles/2.0.1/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1933,6 +3469,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 2.2.0
@@ -1947,6 +3495,18 @@ steps:
       dockerfile: dockerfiles/2.2.0/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1963,6 +3523,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 2.4.0
@@ -1977,6 +3549,18 @@ steps:
       dockerfile: dockerfiles/2.4.0/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1993,6 +3577,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 2.6.0
@@ -2007,6 +3603,18 @@ steps:
       dockerfile: dockerfiles/2.6.0/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -2023,6 +3631,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 2.8.0
@@ -2037,6 +3657,18 @@ steps:
       dockerfile: dockerfiles/2.8.0/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -2053,6 +3685,18 @@ steps:
       dry_run: true  # Do not push at the end of this step
       purge: false
 
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
 ---
 kind: pipeline
 name: 2.10.0
@@ -2067,4 +3711,16 @@ steps:
       dockerfile: dockerfiles/2.10.0/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
