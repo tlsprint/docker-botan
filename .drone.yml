@@ -5,19 +5,39 @@ name: 1.5.6
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.5.6
-      dockerfile: dockerfiles/1.5.6/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.5.6
+        --file dockerfiles/1.5.6/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.5.6
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.5.6
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -32,19 +52,39 @@ name: 1.5.7
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.5.7
-      dockerfile: dockerfiles/1.5.7/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.5.7
+        --file dockerfiles/1.5.7/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.5.7
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.5.7
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -59,19 +99,39 @@ name: 1.5.8
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.5.8
-      dockerfile: dockerfiles/1.5.8/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.5.8
+        --file dockerfiles/1.5.8/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.5.8
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.5.8
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -86,19 +146,39 @@ name: 1.5.9
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.5.9
-      dockerfile: dockerfiles/1.5.9/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.5.9
+        --file dockerfiles/1.5.9/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.5.9
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.5.9
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -113,19 +193,39 @@ name: 1.5.10
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.5.10
-      dockerfile: dockerfiles/1.5.10/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.5.10
+        --file dockerfiles/1.5.10/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.5.10
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.5.10
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -140,19 +240,39 @@ name: 1.5.11
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.5.11
-      dockerfile: dockerfiles/1.5.11/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.5.11
+        --file dockerfiles/1.5.11/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.5.11
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.5.11
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -167,19 +287,39 @@ name: 1.5.12
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.5.12
-      dockerfile: dockerfiles/1.5.12/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.5.12
+        --file dockerfiles/1.5.12/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.5.12
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.5.12
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -194,19 +334,39 @@ name: 1.5.13
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.5.13
-      dockerfile: dockerfiles/1.5.13/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.5.13
+        --file dockerfiles/1.5.13/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.5.13
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.5.13
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -221,19 +381,39 @@ name: 1.6.0
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.6.0
-      dockerfile: dockerfiles/1.6.0/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.6.0
+        --file dockerfiles/1.6.0/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.6.0
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.6.0
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -248,19 +428,39 @@ name: 1.6.1
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.6.1
-      dockerfile: dockerfiles/1.6.1/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.6.1
+        --file dockerfiles/1.6.1/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.6.1
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.6.1
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -275,19 +475,39 @@ name: 1.6.2
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.6.2
-      dockerfile: dockerfiles/1.6.2/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.6.2
+        --file dockerfiles/1.6.2/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.6.2
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.6.2
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -302,19 +522,39 @@ name: 1.6.3
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.6.3
-      dockerfile: dockerfiles/1.6.3/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.6.3
+        --file dockerfiles/1.6.3/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.6.3
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.6.3
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -329,19 +569,39 @@ name: 1.6.4
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.6.4
-      dockerfile: dockerfiles/1.6.4/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.6.4
+        --file dockerfiles/1.6.4/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.6.4
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.6.4
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -356,19 +616,39 @@ name: 1.6.5
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.6.5
-      dockerfile: dockerfiles/1.6.5/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.6.5
+        --file dockerfiles/1.6.5/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.6.5
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.6.5
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -383,19 +663,39 @@ name: 1.7.0
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.7.0
-      dockerfile: dockerfiles/1.7.0/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.7.0
+        --file dockerfiles/1.7.0/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.7.0
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.7.0
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -410,19 +710,39 @@ name: 1.7.1
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.7.1
-      dockerfile: dockerfiles/1.7.1/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.7.1
+        --file dockerfiles/1.7.1/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.7.1
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.7.1
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -437,19 +757,39 @@ name: 1.7.2
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.7.2
-      dockerfile: dockerfiles/1.7.2/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.7.2
+        --file dockerfiles/1.7.2/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.7.2
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.7.2
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -464,19 +804,39 @@ name: 1.7.3
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.7.3
-      dockerfile: dockerfiles/1.7.3/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.7.3
+        --file dockerfiles/1.7.3/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.7.3
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.7.3
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -491,19 +851,39 @@ name: 1.7.4
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.7.4
-      dockerfile: dockerfiles/1.7.4/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.7.4
+        --file dockerfiles/1.7.4/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.7.4
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.7.4
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -518,19 +898,39 @@ name: 1.7.5
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.7.5
-      dockerfile: dockerfiles/1.7.5/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.7.5
+        --file dockerfiles/1.7.5/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.7.5
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.7.5
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -545,19 +945,39 @@ name: 1.7.6
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.7.6
-      dockerfile: dockerfiles/1.7.6/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.7.6
+        --file dockerfiles/1.7.6/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.7.6
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.7.6
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -572,19 +992,39 @@ name: 1.7.7
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.7.7
-      dockerfile: dockerfiles/1.7.7/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.7.7
+        --file dockerfiles/1.7.7/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.7.7
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.7.7
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -599,19 +1039,39 @@ name: 1.7.8
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.7.8
-      dockerfile: dockerfiles/1.7.8/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.7.8
+        --file dockerfiles/1.7.8/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.7.8
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.7.8
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -626,19 +1086,39 @@ name: 1.7.9
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.7.9
-      dockerfile: dockerfiles/1.7.9/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.7.9
+        --file dockerfiles/1.7.9/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.7.9
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.7.9
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -653,19 +1133,39 @@ name: 1.7.10
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.7.10
-      dockerfile: dockerfiles/1.7.10/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.7.10
+        --file dockerfiles/1.7.10/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.7.10
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.7.10
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -680,19 +1180,39 @@ name: 1.7.11
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.7.11
-      dockerfile: dockerfiles/1.7.11/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.7.11
+        --file dockerfiles/1.7.11/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.7.11
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.7.11
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -707,19 +1227,39 @@ name: 1.7.12
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.7.12
-      dockerfile: dockerfiles/1.7.12/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.7.12
+        --file dockerfiles/1.7.12/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.7.12
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.7.12
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -734,19 +1274,39 @@ name: 1.7.13
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.7.13
-      dockerfile: dockerfiles/1.7.13/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.7.13
+        --file dockerfiles/1.7.13/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.7.13
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.7.13
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -761,19 +1321,39 @@ name: 1.7.14
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.7.14
-      dockerfile: dockerfiles/1.7.14/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.7.14
+        --file dockerfiles/1.7.14/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.7.14
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.7.14
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -788,19 +1368,39 @@ name: 1.7.15
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.7.15
-      dockerfile: dockerfiles/1.7.15/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.7.15
+        --file dockerfiles/1.7.15/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.7.15
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.7.15
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -815,19 +1415,39 @@ name: 1.7.16
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.7.16
-      dockerfile: dockerfiles/1.7.16/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.7.16
+        --file dockerfiles/1.7.16/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.7.16
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.7.16
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -842,19 +1462,39 @@ name: 1.7.17
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.7.17
-      dockerfile: dockerfiles/1.7.17/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.7.17
+        --file dockerfiles/1.7.17/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.7.17
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.7.17
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -869,19 +1509,39 @@ name: 1.7.18
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.7.18
-      dockerfile: dockerfiles/1.7.18/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.7.18
+        --file dockerfiles/1.7.18/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.7.18
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.7.18
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -896,19 +1556,39 @@ name: 1.7.19
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.7.19
-      dockerfile: dockerfiles/1.7.19/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.7.19
+        --file dockerfiles/1.7.19/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.7.19
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.7.19
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -923,19 +1603,39 @@ name: 1.7.20
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.7.20
-      dockerfile: dockerfiles/1.7.20/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.7.20
+        --file dockerfiles/1.7.20/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.7.20
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.7.20
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -950,19 +1650,39 @@ name: 1.7.21
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.7.21
-      dockerfile: dockerfiles/1.7.21/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.7.21
+        --file dockerfiles/1.7.21/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.7.21
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.7.21
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -977,19 +1697,39 @@ name: 1.7.22
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.7.22
-      dockerfile: dockerfiles/1.7.22/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.7.22
+        --file dockerfiles/1.7.22/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.7.22
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.7.22
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -1004,19 +1744,39 @@ name: 1.7.23
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.7.23
-      dockerfile: dockerfiles/1.7.23/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.7.23
+        --file dockerfiles/1.7.23/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.7.23
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.7.23
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -1031,19 +1791,39 @@ name: 1.7.24
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.7.24
-      dockerfile: dockerfiles/1.7.24/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.7.24
+        --file dockerfiles/1.7.24/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.7.24
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.7.24
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -1058,19 +1838,39 @@ name: 1.8.0
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.8.0
-      dockerfile: dockerfiles/1.8.0/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.8.0
+        --file dockerfiles/1.8.0/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.8.0
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.8.0
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -1085,19 +1885,39 @@ name: 1.8.1
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.8.1
-      dockerfile: dockerfiles/1.8.1/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.8.1
+        --file dockerfiles/1.8.1/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.8.1
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.8.1
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -1112,19 +1932,39 @@ name: 1.8.2
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.8.2
-      dockerfile: dockerfiles/1.8.2/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.8.2
+        --file dockerfiles/1.8.2/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.8.2
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.8.2
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -1139,19 +1979,39 @@ name: 1.8.3
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.8.3
-      dockerfile: dockerfiles/1.8.3/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.8.3
+        --file dockerfiles/1.8.3/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.8.3
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.8.3
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -1166,19 +2026,39 @@ name: 1.8.4
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.8.4
-      dockerfile: dockerfiles/1.8.4/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.8.4
+        --file dockerfiles/1.8.4/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.8.4
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.8.4
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -1193,19 +2073,39 @@ name: 1.8.5
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.8.5
-      dockerfile: dockerfiles/1.8.5/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.8.5
+        --file dockerfiles/1.8.5/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.8.5
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.8.5
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -1220,19 +2120,39 @@ name: 1.8.6
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.8.6
-      dockerfile: dockerfiles/1.8.6/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.8.6
+        --file dockerfiles/1.8.6/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.8.6
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.8.6
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -1247,19 +2167,39 @@ name: 1.8.7
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.8.7
-      dockerfile: dockerfiles/1.8.7/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.8.7
+        --file dockerfiles/1.8.7/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.8.7
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.8.7
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -1274,19 +2214,39 @@ name: 1.8.8
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.8.8
-      dockerfile: dockerfiles/1.8.8/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.8.8
+        --file dockerfiles/1.8.8/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.8.8
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.8.8
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -1301,19 +2261,39 @@ name: 1.8.9
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.8.9
-      dockerfile: dockerfiles/1.8.9/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.8.9
+        --file dockerfiles/1.8.9/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.8.9
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.8.9
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -1328,19 +2308,39 @@ name: 1.8.10
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.8.10
-      dockerfile: dockerfiles/1.8.10/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.8.10
+        --file dockerfiles/1.8.10/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.8.10
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.8.10
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -1355,19 +2355,39 @@ name: 1.8.11
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.8.11
-      dockerfile: dockerfiles/1.8.11/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.8.11
+        --file dockerfiles/1.8.11/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.8.11
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.8.11
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -1382,19 +2402,39 @@ name: 1.8.12
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.8.12
-      dockerfile: dockerfiles/1.8.12/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.8.12
+        --file dockerfiles/1.8.12/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.8.12
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.8.12
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -1409,19 +2449,39 @@ name: 1.8.13
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.8.13
-      dockerfile: dockerfiles/1.8.13/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.8.13
+        --file dockerfiles/1.8.13/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.8.13
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.8.13
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -1436,19 +2496,39 @@ name: 1.8.14
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.8.14
-      dockerfile: dockerfiles/1.8.14/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.8.14
+        --file dockerfiles/1.8.14/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.8.14
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.8.14
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -1463,19 +2543,39 @@ name: 1.8.15
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.8.15
-      dockerfile: dockerfiles/1.8.15/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.8.15
+        --file dockerfiles/1.8.15/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.8.15
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.8.15
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -1490,19 +2590,39 @@ name: 1.9.0
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.9.0
-      dockerfile: dockerfiles/1.9.0/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.9.0
+        --file dockerfiles/1.9.0/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.9.0
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.9.0
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -1517,19 +2637,39 @@ name: 1.9.1
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.9.1
-      dockerfile: dockerfiles/1.9.1/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.9.1
+        --file dockerfiles/1.9.1/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.9.1
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.9.1
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -1544,19 +2684,39 @@ name: 1.9.2
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.9.2
-      dockerfile: dockerfiles/1.9.2/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.9.2
+        --file dockerfiles/1.9.2/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.9.2
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.9.2
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -1571,19 +2731,39 @@ name: 1.9.3
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.9.3
-      dockerfile: dockerfiles/1.9.3/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.9.3
+        --file dockerfiles/1.9.3/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.9.3
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.9.3
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -1598,19 +2778,39 @@ name: 1.9.4
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.9.4
-      dockerfile: dockerfiles/1.9.4/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.9.4
+        --file dockerfiles/1.9.4/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.9.4
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.9.4
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -1625,19 +2825,39 @@ name: 1.9.5
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.9.5
-      dockerfile: dockerfiles/1.9.5/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.9.5
+        --file dockerfiles/1.9.5/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.9.5
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.9.5
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -1652,19 +2872,39 @@ name: 1.9.6
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.9.6
-      dockerfile: dockerfiles/1.9.6/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.9.6
+        --file dockerfiles/1.9.6/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.9.6
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.9.6
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -1679,19 +2919,39 @@ name: 1.9.7
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.9.7
-      dockerfile: dockerfiles/1.9.7/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.9.7
+        --file dockerfiles/1.9.7/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.9.7
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.9.7
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -1706,19 +2966,39 @@ name: 1.9.8
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.9.8
-      dockerfile: dockerfiles/1.9.8/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.9.8
+        --file dockerfiles/1.9.8/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.9.8
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.9.8
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -1733,19 +3013,39 @@ name: 1.9.9
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.9.9
-      dockerfile: dockerfiles/1.9.9/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.9.9
+        --file dockerfiles/1.9.9/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.9.9
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.9.9
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -1760,19 +3060,39 @@ name: 1.9.10
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.9.10
-      dockerfile: dockerfiles/1.9.10/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.9.10
+        --file dockerfiles/1.9.10/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.9.10
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.9.10
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -1787,19 +3107,39 @@ name: 1.9.11
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.9.11
-      dockerfile: dockerfiles/1.9.11/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.9.11
+        --file dockerfiles/1.9.11/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.9.11
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.9.11
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -1814,19 +3154,39 @@ name: 1.9.12
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.9.12
-      dockerfile: dockerfiles/1.9.12/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.9.12
+        --file dockerfiles/1.9.12/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.9.12
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.9.12
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -1841,19 +3201,39 @@ name: 1.9.13
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.9.13
-      dockerfile: dockerfiles/1.9.13/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.9.13
+        --file dockerfiles/1.9.13/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.9.13
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.9.13
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -1868,19 +3248,39 @@ name: 1.9.14
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.9.14
-      dockerfile: dockerfiles/1.9.14/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.9.14
+        --file dockerfiles/1.9.14/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.9.14
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.9.14
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -1895,19 +3295,39 @@ name: 1.9.15
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.9.15
-      dockerfile: dockerfiles/1.9.15/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.9.15
+        --file dockerfiles/1.9.15/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.9.15
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.9.15
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -1922,19 +3342,39 @@ name: 1.9.16
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.9.16
-      dockerfile: dockerfiles/1.9.16/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.9.16
+        --file dockerfiles/1.9.16/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.9.16
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.9.16
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -1949,19 +3389,39 @@ name: 1.9.17
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.9.17
-      dockerfile: dockerfiles/1.9.17/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.9.17
+        --file dockerfiles/1.9.17/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.9.17
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.9.17
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -1976,19 +3436,39 @@ name: 1.9.18
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.9.18
-      dockerfile: dockerfiles/1.9.18/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.9.18
+        --file dockerfiles/1.9.18/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.9.18
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.9.18
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -2003,19 +3483,39 @@ name: 1.10.0
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.10.0
-      dockerfile: dockerfiles/1.10.0/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.10.0
+        --file dockerfiles/1.10.0/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.10.0
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.10.0
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -2030,19 +3530,39 @@ name: 1.10.1
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.10.1
-      dockerfile: dockerfiles/1.10.1/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.10.1
+        --file dockerfiles/1.10.1/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.10.1
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.10.1
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -2057,19 +3577,39 @@ name: 1.10.2
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.10.2
-      dockerfile: dockerfiles/1.10.2/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.10.2
+        --file dockerfiles/1.10.2/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.10.2
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.10.2
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -2084,19 +3624,39 @@ name: 1.10.3
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.10.3
-      dockerfile: dockerfiles/1.10.3/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.10.3
+        --file dockerfiles/1.10.3/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.10.3
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.10.3
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -2111,19 +3671,39 @@ name: 1.10.4
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.10.4
-      dockerfile: dockerfiles/1.10.4/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.10.4
+        --file dockerfiles/1.10.4/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.10.4
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.10.4
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -2138,19 +3718,39 @@ name: 1.10.5
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.10.5
-      dockerfile: dockerfiles/1.10.5/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.10.5
+        --file dockerfiles/1.10.5/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.10.5
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.10.5
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -2165,19 +3765,39 @@ name: 1.10.6
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.10.6
-      dockerfile: dockerfiles/1.10.6/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.10.6
+        --file dockerfiles/1.10.6/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.10.6
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.10.6
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -2192,19 +3812,39 @@ name: 1.10.7
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.10.7
-      dockerfile: dockerfiles/1.10.7/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.10.7
+        --file dockerfiles/1.10.7/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.10.7
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.10.7
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -2219,19 +3859,39 @@ name: 1.10.8
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.10.8
-      dockerfile: dockerfiles/1.10.8/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.10.8
+        --file dockerfiles/1.10.8/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.10.8
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.10.8
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -2246,19 +3906,39 @@ name: 1.10.9
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.10.9
-      dockerfile: dockerfiles/1.10.9/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.10.9
+        --file dockerfiles/1.10.9/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.10.9
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.10.9
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -2273,19 +3953,39 @@ name: 1.10.11
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.10.11
-      dockerfile: dockerfiles/1.10.11/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.10.11
+        --file dockerfiles/1.10.11/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.10.11
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.10.11
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -2300,19 +4000,39 @@ name: 1.10.12
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.10.12
-      dockerfile: dockerfiles/1.10.12/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.10.12
+        --file dockerfiles/1.10.12/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.10.12
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.10.12
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -2327,19 +4047,39 @@ name: 1.10.13
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.10.13
-      dockerfile: dockerfiles/1.10.13/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.10.13
+        --file dockerfiles/1.10.13/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.10.13
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.10.13
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -2354,19 +4094,39 @@ name: 1.10.14
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.10.14
-      dockerfile: dockerfiles/1.10.14/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.10.14
+        --file dockerfiles/1.10.14/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.10.14
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.10.14
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -2381,19 +4141,39 @@ name: 1.10.15
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.10.15
-      dockerfile: dockerfiles/1.10.15/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.10.15
+        --file dockerfiles/1.10.15/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.10.15
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.10.15
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -2408,19 +4188,39 @@ name: 1.10.16
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.10.16
-      dockerfile: dockerfiles/1.10.16/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.10.16
+        --file dockerfiles/1.10.16/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.10.16
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.10.16
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -2435,19 +4235,39 @@ name: 1.10.17
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.10.17
-      dockerfile: dockerfiles/1.10.17/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.10.17
+        --file dockerfiles/1.10.17/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.10.17
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.10.17
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -2462,19 +4282,39 @@ name: 1.11.0
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.11.0
-      dockerfile: dockerfiles/1.11.0/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.11.0
+        --file dockerfiles/1.11.0/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.11.0
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.11.0
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -2489,19 +4329,39 @@ name: 1.11.1
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.11.1
-      dockerfile: dockerfiles/1.11.1/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.11.1
+        --file dockerfiles/1.11.1/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.11.1
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.11.1
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -2516,19 +4376,39 @@ name: 1.11.2
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.11.2
-      dockerfile: dockerfiles/1.11.2/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.11.2
+        --file dockerfiles/1.11.2/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.11.2
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.11.2
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -2543,19 +4423,39 @@ name: 1.11.3
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.11.3
-      dockerfile: dockerfiles/1.11.3/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.11.3
+        --file dockerfiles/1.11.3/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.11.3
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.11.3
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -2570,19 +4470,39 @@ name: 1.11.4
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.11.4
-      dockerfile: dockerfiles/1.11.4/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.11.4
+        --file dockerfiles/1.11.4/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.11.4
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.11.4
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -2597,19 +4517,39 @@ name: 1.11.5
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.11.5
-      dockerfile: dockerfiles/1.11.5/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.11.5
+        --file dockerfiles/1.11.5/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.11.5
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.11.5
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -2624,19 +4564,39 @@ name: 1.11.6
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.11.6
-      dockerfile: dockerfiles/1.11.6/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.11.6
+        --file dockerfiles/1.11.6/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.11.6
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.11.6
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -2651,19 +4611,39 @@ name: 1.11.7
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.11.7
-      dockerfile: dockerfiles/1.11.7/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.11.7
+        --file dockerfiles/1.11.7/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.11.7
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.11.7
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -2678,19 +4658,39 @@ name: 1.11.8
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.11.8
-      dockerfile: dockerfiles/1.11.8/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.11.8
+        --file dockerfiles/1.11.8/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.11.8
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.11.8
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -2705,19 +4705,39 @@ name: 1.11.9
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.11.9
-      dockerfile: dockerfiles/1.11.9/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.11.9
+        --file dockerfiles/1.11.9/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.11.9
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.11.9
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -2732,19 +4752,39 @@ name: 1.11.10
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.11.10
-      dockerfile: dockerfiles/1.11.10/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.11.10
+        --file dockerfiles/1.11.10/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.11.10
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.11.10
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -2759,19 +4799,39 @@ name: 1.11.11
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.11.11
-      dockerfile: dockerfiles/1.11.11/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.11.11
+        --file dockerfiles/1.11.11/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.11.11
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.11.11
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -2786,19 +4846,39 @@ name: 1.11.12
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.11.12
-      dockerfile: dockerfiles/1.11.12/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.11.12
+        --file dockerfiles/1.11.12/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.11.12
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.11.12
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -2813,19 +4893,39 @@ name: 1.11.13
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.11.13
-      dockerfile: dockerfiles/1.11.13/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.11.13
+        --file dockerfiles/1.11.13/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.11.13
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.11.13
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -2840,19 +4940,39 @@ name: 1.11.14
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.11.14
-      dockerfile: dockerfiles/1.11.14/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.11.14
+        --file dockerfiles/1.11.14/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.11.14
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.11.14
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -2867,19 +4987,39 @@ name: 1.11.15
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.11.15
-      dockerfile: dockerfiles/1.11.15/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.11.15
+        --file dockerfiles/1.11.15/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.11.15
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.11.15
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -2894,19 +5034,39 @@ name: 1.11.16
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.11.16
-      dockerfile: dockerfiles/1.11.16/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.11.16
+        --file dockerfiles/1.11.16/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.11.16
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.11.16
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -2921,19 +5081,39 @@ name: 1.11.17
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.11.17
-      dockerfile: dockerfiles/1.11.17/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.11.17
+        --file dockerfiles/1.11.17/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.11.17
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.11.17
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -2948,19 +5128,39 @@ name: 1.11.18
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.11.18
-      dockerfile: dockerfiles/1.11.18/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.11.18
+        --file dockerfiles/1.11.18/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.11.18
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.11.18
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -2975,19 +5175,39 @@ name: 1.11.19
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.11.19
-      dockerfile: dockerfiles/1.11.19/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.11.19
+        --file dockerfiles/1.11.19/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.11.19
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.11.19
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -3002,19 +5222,39 @@ name: 1.11.20
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.11.20
-      dockerfile: dockerfiles/1.11.20/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.11.20
+        --file dockerfiles/1.11.20/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.11.20
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.11.20
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -3029,19 +5269,39 @@ name: 1.11.21
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.11.21
-      dockerfile: dockerfiles/1.11.21/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.11.21
+        --file dockerfiles/1.11.21/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.11.21
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.11.21
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -3056,19 +5316,39 @@ name: 1.11.22
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.11.22
-      dockerfile: dockerfiles/1.11.22/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.11.22
+        --file dockerfiles/1.11.22/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.11.22
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.11.22
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -3083,19 +5363,39 @@ name: 1.11.23
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.11.23
-      dockerfile: dockerfiles/1.11.23/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.11.23
+        --file dockerfiles/1.11.23/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.11.23
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.11.23
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -3110,19 +5410,39 @@ name: 1.11.24
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.11.24
-      dockerfile: dockerfiles/1.11.24/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.11.24
+        --file dockerfiles/1.11.24/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.11.24
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.11.24
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -3137,19 +5457,39 @@ name: 1.11.25
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.11.25
-      dockerfile: dockerfiles/1.11.25/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.11.25
+        --file dockerfiles/1.11.25/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.11.25
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.11.25
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -3164,19 +5504,39 @@ name: 1.11.26
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.11.26
-      dockerfile: dockerfiles/1.11.26/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.11.26
+        --file dockerfiles/1.11.26/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.11.26
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.11.26
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -3191,19 +5551,39 @@ name: 1.11.27
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.11.27
-      dockerfile: dockerfiles/1.11.27/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.11.27
+        --file dockerfiles/1.11.27/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.11.27
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.11.27
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -3218,19 +5598,39 @@ name: 1.11.28
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.11.28
-      dockerfile: dockerfiles/1.11.28/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.11.28
+        --file dockerfiles/1.11.28/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.11.28
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.11.28
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -3245,19 +5645,39 @@ name: 1.11.29
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.11.29
-      dockerfile: dockerfiles/1.11.29/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.11.29
+        --file dockerfiles/1.11.29/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.11.29
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.11.29
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -3272,19 +5692,39 @@ name: 1.11.30
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.11.30
-      dockerfile: dockerfiles/1.11.30/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.11.30
+        --file dockerfiles/1.11.30/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.11.30
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.11.30
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -3299,19 +5739,39 @@ name: 1.11.31
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.11.31
-      dockerfile: dockerfiles/1.11.31/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.11.31
+        --file dockerfiles/1.11.31/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.11.31
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.11.31
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -3326,19 +5786,39 @@ name: 1.11.32
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.11.32
-      dockerfile: dockerfiles/1.11.32/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.11.32
+        --file dockerfiles/1.11.32/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.11.32
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.11.32
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -3353,19 +5833,39 @@ name: 1.11.33
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.11.33
-      dockerfile: dockerfiles/1.11.33/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.11.33
+        --file dockerfiles/1.11.33/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.11.33
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.11.33
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -3380,19 +5880,39 @@ name: 1.11.34
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 1.11.34
-      dockerfile: dockerfiles/1.11.34/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:1.11.34
+        --file dockerfiles/1.11.34/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:1.11.34
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:1.11.34
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -3407,19 +5927,39 @@ name: 2.0.0
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 2.0.0
-      dockerfile: dockerfiles/2.0.0/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:2.0.0
+        --file dockerfiles/2.0.0/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:2.0.0
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:2.0.0
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -3434,19 +5974,39 @@ name: 2.0.1
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 2.0.1
-      dockerfile: dockerfiles/2.0.1/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:2.0.1
+        --file dockerfiles/2.0.1/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:2.0.1
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:2.0.1
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -3461,19 +6021,39 @@ name: 2.1.0
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 2.1.0
-      dockerfile: dockerfiles/2.1.0/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:2.1.0
+        --file dockerfiles/2.1.0/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:2.1.0
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:2.1.0
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -3488,19 +6068,39 @@ name: 2.2.0
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 2.2.0
-      dockerfile: dockerfiles/2.2.0/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:2.2.0
+        --file dockerfiles/2.2.0/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:2.2.0
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:2.2.0
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -3515,19 +6115,39 @@ name: 2.3.0
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 2.3.0
-      dockerfile: dockerfiles/2.3.0/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:2.3.0
+        --file dockerfiles/2.3.0/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:2.3.0
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:2.3.0
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -3542,19 +6162,39 @@ name: 2.4.0
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 2.4.0
-      dockerfile: dockerfiles/2.4.0/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:2.4.0
+        --file dockerfiles/2.4.0/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:2.4.0
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:2.4.0
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -3569,19 +6209,39 @@ name: 2.5.0
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 2.5.0
-      dockerfile: dockerfiles/2.5.0/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:2.5.0
+        --file dockerfiles/2.5.0/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:2.5.0
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:2.5.0
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -3596,19 +6256,39 @@ name: 2.6.0
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 2.6.0
-      dockerfile: dockerfiles/2.6.0/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:2.6.0
+        --file dockerfiles/2.6.0/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:2.6.0
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:2.6.0
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -3623,19 +6303,39 @@ name: 2.7.0
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 2.7.0
-      dockerfile: dockerfiles/2.7.0/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:2.7.0
+        --file dockerfiles/2.7.0/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:2.7.0
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:2.7.0
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -3650,19 +6350,39 @@ name: 2.8.0
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 2.8.0
-      dockerfile: dockerfiles/2.8.0/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:2.8.0
+        --file dockerfiles/2.8.0/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:2.8.0
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:2.8.0
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -3677,19 +6397,39 @@ name: 2.9.0
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 2.9.0
-      dockerfile: dockerfiles/2.9.0/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:2.9.0
+        --file dockerfiles/2.9.0/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:2.9.0
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:2.9.0
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
@@ -3704,19 +6444,86 @@ name: 2.10.0
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/botan
-      tags: 2.10.0
-      dockerfile: dockerfiles/2.10.0/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:2.10.0
+        --file dockerfiles/2.10.0/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:2.10.0
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:2.10.0
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+
+volumes:
+    # Expose host docker to build steps
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
+---
+kind: pipeline
+name: 2.11.0
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/botan:2.11.0
+        --file dockerfiles/2.11.0/Dockerfile
+
+    # Store the resulting image on the host docker, so it can be used in the
+    # next step.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/botan:2.11.0
+    detach: true
+
+  - name: publish
+    image: docker
+    commands:
+      - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - docker push tlsprint/botan:2.11.0
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+
+    # Give access to host docker, the previously build image is available here.
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
 
 volumes:
     # Expose host docker to build steps
