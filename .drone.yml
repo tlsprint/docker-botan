@@ -38,6 +38,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -84,6 +88,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -132,6 +140,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -178,6 +190,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -226,6 +242,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -272,6 +292,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -320,6 +344,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -366,6 +394,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -414,6 +446,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -460,6 +496,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -508,6 +548,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -554,6 +598,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -602,6 +650,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -648,6 +700,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -696,6 +752,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -742,6 +802,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -790,6 +854,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -836,6 +904,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -884,6 +956,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -930,6 +1006,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -978,6 +1058,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -1024,6 +1108,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -1072,6 +1160,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -1118,6 +1210,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -1166,6 +1262,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -1212,6 +1312,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -1260,6 +1364,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -1306,6 +1414,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -1354,6 +1466,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -1400,6 +1516,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -1448,6 +1568,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -1494,6 +1618,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -1542,6 +1670,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -1588,6 +1720,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -1636,6 +1772,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -1682,6 +1822,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -1730,6 +1874,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -1776,6 +1924,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -1824,6 +1976,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -1870,6 +2026,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -1918,6 +2078,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -1964,6 +2128,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -2012,6 +2180,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -2058,6 +2230,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -2106,6 +2282,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -2152,6 +2332,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -2200,6 +2384,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -2246,6 +2434,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -2294,6 +2486,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -2340,6 +2536,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -2388,6 +2588,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -2434,6 +2638,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -2482,6 +2690,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -2528,6 +2740,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -2576,6 +2792,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -2622,6 +2842,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -2670,6 +2894,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -2716,6 +2944,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -2764,6 +2996,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -2810,6 +3046,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -2858,6 +3098,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -2904,6 +3148,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -2952,6 +3200,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -2998,6 +3250,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -3046,6 +3302,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -3092,6 +3352,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -3140,6 +3404,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -3186,6 +3454,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -3234,6 +3506,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -3280,6 +3556,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -3328,6 +3608,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -3374,6 +3658,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -3422,6 +3710,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -3468,6 +3760,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -3516,6 +3812,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -3562,6 +3862,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -3610,6 +3914,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -3656,6 +3964,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -3704,6 +4016,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -3750,6 +4066,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -3798,6 +4118,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -3844,6 +4168,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -3892,6 +4220,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -3938,6 +4270,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -3986,6 +4322,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -4032,6 +4372,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -4080,6 +4424,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -4126,6 +4474,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -4174,6 +4526,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -4220,6 +4576,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -4268,6 +4628,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -4314,6 +4678,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -4362,6 +4730,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -4408,6 +4780,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -4456,6 +4832,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -4502,6 +4882,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -4550,6 +4934,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -4596,6 +4984,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -4644,6 +5036,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -4690,6 +5086,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -4738,6 +5138,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -4784,6 +5188,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -4832,6 +5240,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -4878,6 +5290,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -4926,6 +5342,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -4972,6 +5392,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -5020,6 +5444,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -5066,6 +5494,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -5114,6 +5546,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -5160,6 +5596,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -5208,6 +5648,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -5254,6 +5698,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -5302,6 +5750,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -5348,6 +5800,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -5396,6 +5852,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -5442,6 +5902,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -5490,6 +5954,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -5536,6 +6004,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -5584,6 +6056,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -5630,6 +6106,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -5678,6 +6158,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -5724,6 +6208,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -5772,6 +6260,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -5818,6 +6310,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -5866,6 +6362,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -5912,6 +6412,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -5960,6 +6464,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -6006,6 +6514,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -6054,6 +6566,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -6100,6 +6616,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -6148,6 +6668,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -6194,6 +6718,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -6242,6 +6770,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -6288,6 +6820,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -6336,6 +6872,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -6382,6 +6922,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
@@ -6430,6 +6974,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -6477,6 +7025,10 @@ steps:
       - name: docker
         path: /var/run/docker.sock
 
+    when:
+      branch:
+        - master
+
 
 volumes:
     # Expose host docker to build steps
@@ -6523,6 +7075,10 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+
+    when:
+      branch:
+        - master
 
 
 volumes:
